@@ -1,0 +1,27 @@
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Personas</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/estilosNombreEdad.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Inicio de sesión</h1>
+        <form action="/nombreyedad" method="POST">
+            <label for="nombre1">Ingresa tu nombre:</label>
+            <input type="text" id="nombre1" name="nombre1" required>
+            <br>
+            <label for="edad1">Ingresa tu contraseña:</label>
+            <input type="text" id="edad1" name="edad1" required>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+
+        {% if resultado %}
+        <div class="resultado">
+            <p>Resultado: {{ resultado }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
